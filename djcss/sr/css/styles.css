@@ -1,0 +1,134 @@
+a:hover,a:focus{
+    text-decoration: none;
+    outline: none;
+}
+#accordion .panel{
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    margin: 0 0 15px 10px;
+}
+#accordion .panel-heading{
+    padding: 0;
+    border-radius: 30px;
+}
+#accordion .panel-title a{
+    display: block;
+    padding: 7px 15px 7px 45px;
+    background: #ebb710;
+   
+    color: #fff;
+    border: 1px solid transparent;
+    border-radius: 30px;
+    position: relative;
+    transition: all 0.3s ease 0s;
+}
+#accordion .panel-title a.collapsed{
+    background: #fff;
+    color: #0d345d;
+    border: 1px solid #ddd;
+}
+#accordion .panel-title a:after,
+#accordion .panel-title a.collapsed:after{
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    background: #ebb710;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    border: 1px solid transparent;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.58);
+    position: absolute;
+    top: -5px;
+    left: -20px;
+    transition: all 0.3s ease 0s;
+}
+#accordion .panel-title a.collapsed:after{
+    content: "\f105";
+    background: #fff;
+    color: #0d345d;
+    border: 1px solid #ddd;
+    box-shadow: none;
+}
+#accordion .panel-body{
+    padding: 20px 25px 10px 9px;
+    background: transparent;
+    font-size: 16px;
+    color: #8c8c8c;
+    line-height: 25px;
+    border-top: none;
+    position: relative;
+}
+#accordion .panel-body p{
+    padding-left: 25px;
+    border-left: 1px dashed #8c8c8c;
+}
+
+/* table styles */
+table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin:0;
+    padding:0;
+    width: 100%;
+  }
+  table tr {
+    border: 1px solid #ddd;
+    padding: 5px;
+  }
+  table td{
+    border: 1px solid #ddd;
+  }
+  table th, table td {
+    padding: 10px;
+    text-align: center;
+  }
+  table th {
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  @media screen and (max-width: 600px) {
+    table {
+      border: 0;
+    }
+    table thead {
+      display: none;
+    }
+    table tr {
+      border-bottom: 2px solid #ddd;
+      display: block;
+      margin-bottom: 10px;
+    }
+    table td {
+      border: none;
+      border-bottom: 1px dotted #ccc;
+      display: block;
+      font-size: 13px;
+      text-align: right;
+    }
+    table td:last-child {
+      border-bottom: 0;
+    }
+    table td:before {
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+  @media print{
+    table {
+      border:solid #000 !important;
+      border-width:1px 0 0 1px !important;
+  }
+  th, td {
+      border:solid #000 !important;
+      border-width:0 1px 1px 0 !important;
+  }
+  }
